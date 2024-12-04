@@ -1,0 +1,8 @@
+You will receive as input a .csv table with the following structure:
+book_title,sent_id,sentence
+The table includes the review of one book (identified by "book_title"), split into sentences.
+You will have to produce as output another .csv table with the following structure:
+sent_id,label
+You will assign the label to each sentence (even when the sentence is broken or incomplete) by following these guidelines:
+- "no_val", when the sentence does not evaluate the reviewed book;
+- "val", evaluations regarding the impact of the book on the reader's life; the value the reader places on the work based on what it made him or her feel (it can range from aspects more related to the book itself, to more intimate and personal issues); all considerations of a book's ability to teach the reader something or stimulate him intellectually; any evaluation concerning the specifics of literary language, both in its formal and content aspects; it also concerns the impact that a book has had not on a single reader, but on a community of readers (references to literary awards, to the popularity of the book); tag with this label all evaluative sentences that do not fall into any of the above categories.

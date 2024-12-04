@@ -1,0 +1,20 @@
+You will receive as input a .csv table with the following structure:
+book_title,sent_id,sentence
+The table includes the review of one book (identified by "book_title"), split into sentences.
+You will have to produce as output another .csv table with the following structure:
+sent_id,label
+You will assign the label to each sentence (even when the sentence is broken or incomplete) by following these guidelines.
+Guideline 1: You will have to treat each sentence as a single unit of meaning. Therefore, you will assign a label based on the sentence alone. Only in cases where one sentence is incomprehensible without the next, treat the two as a single block and assign them the same label.
+Guideline 2: You will have to assign one (and only one) label to each sentence. If several labels can be assigned to one sentence, choose the label that fits best with the sentence.
+Guideline 3: Possible labels are: "no_val" and "val". They are described here below.
+Label 1: "no_val"
+Use this label for all non-evaluative sentences. A non-evaluative sentence is a sentence that does not explicitly express an evaluation of the reviewed book, or that does not explicitly describe the impact it had on the reader. Use it also when the sentence expresses evaluations regarding other books than the one reviewed, or evaluations related to past readings of the reviewed book. Use it also in the case of: interpretations ("the author wishes to express..." and the like), personal anecdotes ("I first read the book when I was in college"), plot summaries.
+Label 2: "val"
+Use this label for sentences expressing the impact of the reviewed book on the reader and for all evaluative sentences. 
+Use this label when the sentence explicitly describes the impact the reviewed book had on the reader. In particular, use it for sentences regarding the impact of the book on the reader's life, the existential 'lessons' that the reader learned from the book. The sentence must contain an explicit reference to the reviewer's real life or experience.
+Use it also for sentences regarding the emotional impact of the book on the reader, the way the former made the latter feel. Still, be careful in not assigning this label to sentences that use an emotional language in a generic and/or metaphorical way (e.g. "I loved this book," "I enjoyed the reading"). 
+Finally, use it for sentences regarding the importance of the information that the reader extracted from the book, or the intellectual stimulation the reader experienced while reading it.
+Use this label also for evaluative sentences. An evaluative sentence is a sentence that explicitly expresses an evaluation of the reviewed book. An evaluative sentence may have positive, negative, or ambiguous ('mixed feelings') valence. An evaluative sentence must specify, explicitly, its object. Any comparison, resulting in the priority of one over the other, between the reviewed book and other cultural products is to be considered as an evaluative sentence.
+Use this label when the sentence explicitly expresses an evaluation concerning the specifics of literary language, both in its formal aspects (use of rhetorical figures, writing style, etc...) and content aspects (character or plot construction, narratological features, etc...). The evaluation must have explicit reference to literary art (e.g., plot, characters, style).
+In addition, use this label when the sentence evaluates a book not based on the experience of a single reader, but on the experience of a community of readers (e.g., references to literary awards, to the popularity of the book). Of particular interest here are all those judgments that enact (or reaffirm) a canonization of the judged work, placing it on the roster of 'important' readings.
+Finally, use this label for all those statements not accompanied by explanation, i.e., expressions of appreciation not related to specific aspects of the book or to specific effects it had on the reader (e.g., "beautiful book," "highly recommended," "an unbearable read"). Also, tag with this category all evaluative sentences that do not fall into any of the above cases.

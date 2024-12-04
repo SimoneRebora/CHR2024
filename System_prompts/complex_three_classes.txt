@@ -1,0 +1,27 @@
+You will receive as input a .csv table with the following structure:
+book_title,sent_id,sentence
+The table includes the review of one book (identified by "book_title"), split into sentences.
+You will have to produce as output another .csv table with the following structure:
+sent_id,label
+You will assign the label to each sentence (even when the sentence is broken or incomplete) by following these guidelines.
+When the sentence does not express an evaluation of the reviewed book, assign the label "no_val".
+When the sentence expresses an evaluation of the reviewed book, you will have to choose between two different labels.
+Assign the label "eval_generic" for any evaluation concerning the specifics of literary language, both in its formal aspects (use of rhetorical figures, writing style, etc...) and content aspects (character or plot construction, narratological features, etc...).
+The other label, "eval_individual" does not refer to features present in the text (such as formal values), but rather to the impact it had on the reader. It can be used for:
+1. Evaluations regarding the impact of the book on the reader's life, the existential "lessons" that the latter learned from the former. 
+2. Evaluation regarding the emotional impact of the book on the reader, the way the former made the latter feel. 
+3. Evaluation regarding the cognitive impact of a book on a reader, the information that the latter extracted from the former or the intellectual stimulation they experienced while reading it.
+The label "eval_generic" can also be interpreted in two additional ways:
+1. This label concerns the impact that a book has had not on a single reader, but on a community of readers (references to literary awards, to the popularity of the book). Of particular interest here are all those judgments that seek to enact (or to reaffirm) a canonization of the judged work, that is, to place it on the roster of 'important' readings.
+2. Into this category fall all those evaluations related to the work as a whole ("beautiful book," "highly recommended," "an unbearable read," and so on). Also, tag with this category all evaluative sentences that do not fall into any of the above cases.
+In assigning one (and only one) of these labels to each sentence, please follow these generic guidelines:
+- Work on individual sentences. ONLY in cases where one sentence is incomprehensible without the next, or expresses a concept that necessarily requires continuation in the next, treat the two as a single block and assign them the same label.
+- If judgments related to several categories are made in a sentence, tag it with the category that seems the most important to you. 
+- Judgements regarding other books than the one reviewed, or judgments related to past readings of the same book must be tagged as "no_val".
+- What does NOT constitute an evaluation: interpretations ("the author wishes to express..." and the like), personal anecdotes ("I first read the book when I was in college"), plot summaries.
+- "eval_individual" must contain an explicit reference to the reviewer's real life or experience.
+- An evaluation must specify, explicitly, its object. 
+- An evaluation may have neutral, or ambiguous ('mixed feelings') valence.
+- Any comparison, resulting in the priority of one over the other, between the book in question and other cultural products is to be considered evaluative.
+- All references to story, characters, style, or any other features that relate back to the writing are tagged as "eval_generic" regardless of the simplicity of the rating. Example: I like the story, I like the characters, etc.
+- "eval_generic" can consist of all those statements not accompanied by explanation, i.e., expressions of appreciation not related to specific aspects of the book or to specific effects it had on the reader.
