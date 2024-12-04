@@ -1,0 +1,1 @@
+This folder will contain all results produced by GPT4.
